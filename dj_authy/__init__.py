@@ -9,10 +9,10 @@ def _url_to_appropriate_authy_page(request, authy_required_session_token):
     profile = request.user.authy_profile
 
     if profile.cellphone is None:
-        message = 'Please complete the following details before you can authenticate using authy (https://www.authy.com/).'
+        message = 'Please complete the following details before you can authenticate using Authy.'
         url = reverse_lazy('dj_authy:profile')
     else:
-        message = 'Please authenticate yourself using authy (https://www.authy.com/).'
+        message = 'Please authenticate yourself using Authy.'
         url = reverse_lazy('dj_authy:holding')
 
     token = signing.dumps(authy_required_session_token, salt=settings.SECRET_KEY)
