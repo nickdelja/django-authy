@@ -10,7 +10,9 @@ setup(
     url="https://github.com/rosscdh/django-authy",
     description="A Django app for integrating with authy",
     zip_safe=False,
-    include_package_data=True,
+    package_data={
+        "dj_authy": ["templates/dj_authy/*.html"]
+    },
     install_requires = [
         'authy',
         'django-phonenumber-field',
