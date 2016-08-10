@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form class="form-signin" method="post">
+<form class="viewform form-signin" method="post">
     {% csrf_token %}
     <h2 class="form-signin-heading">Authy Code</h2>
     {{ form.as_p }}
