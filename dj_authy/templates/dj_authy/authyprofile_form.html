@@ -1,6 +1,7 @@
 {% extends 'gui.html' %}
 
 {% block content %}
+{{ block.super }}
 <form class="form-signin" method="post">
     {% csrf_token %}
     <h2 class="form-signin-heading">Authy Profile</h2>
