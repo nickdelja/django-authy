@@ -25,6 +25,7 @@ class AuthyAuthenticationRequiredMiddleware(object):
             # then use wants authy auth
             if not request.session.get(AUTHY_SESSION_KEY):
 
+                logger.info(request.path)
                 # but has not authenticated with authy yet
                 if request.path not in [reverse_lazy('dj_authy:holding'),
                                         reverse_lazy('dj_authy:profile'),
