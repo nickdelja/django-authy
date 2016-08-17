@@ -9,7 +9,9 @@ class BaseAuthyMediaForm(forms.ModelForm):
     Use provided authy media
     """
     class Media:
-        css = ('//cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.css',)
+        css = {
+            css = ('//cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.css',)
+        }
         js = ('//cdnjs.cloudflare.com/ajax/libs/authy-form-helpers/2.3/form.authy.min.js',)
 
 
