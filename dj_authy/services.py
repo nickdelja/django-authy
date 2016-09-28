@@ -89,7 +89,7 @@ class AuthyService(object):
         Token should always be passed in as a string
         0000000 evaluates as 0 (sandbox test token)
         """
-        if type(token) not in [str, unicode]:
+        if type(token) not in [str]:
             raise Exception('Token to validate should be a string.')
 
         verification = self.client.tokens.verify(self.authy_id, str(token), {"force": self.force_verification})
